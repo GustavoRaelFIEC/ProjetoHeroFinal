@@ -1,4 +1,4 @@
-import mysql from "mysql2";
+const mysql = require("mysql2");
 
 const pool = mysql.createPool({
     database: process.env.DB_DATABASE,
@@ -8,4 +8,4 @@ const pool = mysql.createPool({
     port: process.env.DB_PORT,
 });
 
-export default pool.promise();
+exports.module = pool.promise();
